@@ -9,7 +9,7 @@ import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.util.CharsetUtil;
 
 @ChannelHandler.Sharable       //标识这类的实例之间可以在 channel 里面共享
-public class EchoServerHandler extends ChannelInboundHandlerAdapter {
+public class EchoServerHandler2 extends ChannelInboundHandlerAdapter {
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
         cause.printStackTrace();    //打印异常堆栈跟踪
@@ -19,7 +19,7 @@ public class EchoServerHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         ByteBuf in = (ByteBuf) msg;
-        System.out.println("Server received: 1" + in.toString(CharsetUtil.UTF_8));//日志消息输出到控制台
+        System.out.println("Server received 2 : " + in.toString(CharsetUtil.UTF_8));//日志消息输出到控制台
         ctx.write(in);  //将所接收的消息返回给发送者。注意，这还没有冲刷数据
     }
 
