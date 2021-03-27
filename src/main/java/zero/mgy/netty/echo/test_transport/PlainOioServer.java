@@ -1,4 +1,4 @@
-package zero.mgy.echo.test_transport;
+package zero.mgy.netty.echo.test_transport;
 
 import java.io.IOException;
 import java.io.OutputStream;

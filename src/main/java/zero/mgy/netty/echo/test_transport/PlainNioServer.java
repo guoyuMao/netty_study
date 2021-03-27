@@ -1,6 +1,4 @@
-package zero.mgy.echo.test_transport;
-
-import io.netty.buffer.ByteBuf;
+package zero.mgy.netty.echo.test_transport;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;

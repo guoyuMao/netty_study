@@ -1,7 +1,5 @@
 package zero.mgy.java;
 
-import io.netty.channel.ServerChannel;
-
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.net.ServerSocket;
@@ -14,7 +12,7 @@ import java.util.Iterator;
 import java.util.Set;
 
 public class NIO {
-    public void server(int port) throws IOException{
+    public void server(int port) throws IOException {
         ServerSocketChannel socketChannel = ServerSocketChannel.open();
         socketChannel.configureBlocking(false);
         ServerSocket ss = socketChannel.socket();
@@ -22,6 +20,9 @@ public class NIO {
         ss.bind(address);
         Selector selector = Selector.open();
         socketChannel.register(selector, SelectionKey.OP_ACCEPT);
+//        socketChannel.register(selector, SelectionKey.OP_CONNECT);
+//        socketChannel.register(selector, SelectionKey.OP_WRITE);
+//        socketChannel.register(selector, SelectionKey.OP_READ);
         final ByteBuffer msg = ByteBuffer.wrap("Hi!\r\n".getBytes());
         for (; ; ) {
             try {
@@ -53,15 +54,28 @@ public class NIO {
                         }
                         client.close();
                     }
+//                    if(key.isConnectable()){
+//                        System.out.println("connectable");
+//                    }
+//                    if(key.isReadable()){
+//                        System.out.println("readable");
+//                    }
+//                    if(key.isValid()){
+//                        System.out.println("valid");
+//                    }
                 } catch (IOException exception) {
                     key.cancel();
                     try {
                         key.channel().close();
                     } catch (IOException e) {
-
+                        e.printStackTrace();
                     }
                 }
             }
         }
+    }
+
+    public static void main(String[] args) throws IOException {
+        new NIO().server(8080);
     }
 }

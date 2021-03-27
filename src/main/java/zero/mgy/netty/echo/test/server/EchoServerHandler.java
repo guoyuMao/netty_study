@@ -1,4 +1,4 @@
-package zero.mgy.echo.test.server;
+package zero.mgy.netty.echo.test.server;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;

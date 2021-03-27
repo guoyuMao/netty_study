@@ -1,4 +1,4 @@
-package zero.mgy;
+package zero.mgy.netty;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.buffer.ByteBuf;

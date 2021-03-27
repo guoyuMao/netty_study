@@ -1,7 +1,10 @@
 #netty_study
+
 ##一、模块
+
 ### BOOTSTRAP
 Netty 应用程序通过设置 bootstrap（引导）类的开始，该类提供了一个 用于应用程序网络层配置的容器。
+
 #### Bootstrap(客户端)
 Bootstrap用来连接远程主机，有1个EventLoopGroup
 

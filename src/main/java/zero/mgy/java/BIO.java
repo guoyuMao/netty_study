@@ -26,7 +26,7 @@ public class BIO {
                         try {
                             clientSocket.close();
                         } catch (IOException exception) {
-
+                            exception.printStackTrace();
                         }
                     }
                     if (out != null) {

@@ -1,4 +1,4 @@
-package zero.mgy.echo.test.client;
+package zero.mgy.netty.echo.test.client;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;

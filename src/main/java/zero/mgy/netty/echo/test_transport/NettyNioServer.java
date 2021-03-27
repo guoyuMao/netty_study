@@ -1,4 +1,4 @@
-package zero.mgy.echo.test_transport;
+package zero.mgy.netty.echo.test_transport;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.buffer.ByteBuf;
