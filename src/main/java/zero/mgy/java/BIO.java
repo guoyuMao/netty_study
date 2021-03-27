@@ -1,4 +1,4 @@
-package zero.mgy;
+package zero.mgy.java;
 
 import java.io.IOException;
 import java.io.OutputStream;

@@ -1,4 +1,4 @@
-package zero.mgy;
+package zero.mgy.java;
 
 import io.netty.channel.ServerChannel;
 
